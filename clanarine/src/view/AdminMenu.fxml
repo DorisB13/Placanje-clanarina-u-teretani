@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="594.0" prefWidth="653.0" stylesheets="@admin.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminMenuController">
+   <children>
+      <Button layoutX="575.0" layoutY="14.0" mnemonicParsing="false" onAction="#Odjava" text="Odjava" />
+      <TabPane layoutY="50.0" prefHeight="542.0" prefWidth="653.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab onSelectionChanged="#listaOsoba" text="Korisnik">
+               <content>
+                  <AnchorPane prefHeight="675.0" prefWidth="721.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="23.0" text="ID" />
+                        <TextField fx:id="jIDK" layoutX="108.0" layoutY="19.0" />
+                        <Label layoutX="20.0" layoutY="57.0" text="Ime" />
+                        <TextField fx:id="jImeK" layoutX="108.0" layoutY="53.0" />
+                        <Label layoutX="12.0" layoutY="94.0" text="Prezime" />
+                        <TextField fx:id="jPrezimeK" layoutX="108.0" layoutY="90.0" />
+                        <Label layoutX="12.0" layoutY="135.0" text="JMBG" />
+                        <TextField fx:id="jJMBGK" layoutX="108.0" layoutY="131.0" />
+                        <Label layoutX="18.0" layoutY="171.0" text="Adresa" />
+                        <TextField fx:id="jAdresaK" layoutX="108.0" layoutY="167.0" />
+                        <Label layoutX="15.0" layoutY="202.0" text="Tip korisnika" />
+                        <TextField fx:id="jTipK" layoutX="108.0" layoutY="198.0" />
+                        <Label layoutX="16.0" layoutY="239.0" text="Korisnicko ime" />
+                        <TextField fx:id="jKImeK" layoutX="108.0" layoutY="235.0" />
+                        <Label layoutX="16.0" layoutY="273.0" text="Lozinka" />
+                        <PasswordField fx:id="jLozinkaK" layoutX="108.0" layoutY="269.0" />
+                        <TableView fx:id="jTableK" layoutX="13.0" layoutY="329.0" onMouseClicked="#postaviPodatkeUCelijeO" prefHeight="177.0" prefWidth="627.0">
+                          <columns>
+                            <TableColumn fx:id="ColumnIDK" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="ColumnImeK" prefWidth="75.0" text="Ime" />
+                              <TableColumn fx:id="ColumnPrezimeK" prefWidth="75.0" text="Prezime" />
+                              <TableColumn fx:id="ColumnJMBGK" prefWidth="75.0" text="JMBG" />
+                              <TableColumn fx:id="ColumnAdresaK" prefWidth="65.0" text="Adresa" />
+                              <TableColumn fx:id="ColumnKImeK" prefWidth="140.0" text="Korisnicko ime" />
+                              <TableColumn fx:id="ColumnLozinkaK" minWidth="4.0" prefWidth="85.0" text="Lozinka" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="414.0" layoutY="78.0" mnemonicParsing="false" onAction="#IsprazniPoljaO" text="Isprazni odabir" />
+                        <Button layoutX="416.0" layoutY="111.0" mnemonicParsing="false" onAction="#DodajO" text="Dodaj kontakt" />
+                        <Button layoutX="439.0" layoutY="144.0" mnemonicParsing="false" onAction="#UrediO" text="Uredi" />
+                        <Button layoutX="437.0" layoutY="180.0" mnemonicParsing="false" onAction="#ObrisiO" text="Obrisi" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <styleClass>
+      <String fx:value="mainFxmlClass" />
+      <String fx:value="root" />
+   </styleClass>
+</AnchorPane>

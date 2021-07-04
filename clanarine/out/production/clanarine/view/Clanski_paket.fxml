@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="466.0" prefWidth="652.0" stylesheets="@korisnik.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Clanski_paketController">
+   <children>
+      <Button layoutX="586.0" layoutY="14.0" mnemonicParsing="false" onAction="#Odjava" text="Odjava" />
+      <TabPane layoutX="1.0" layoutY="53.0" prefHeight="426.0" prefWidth="652.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab onSelectionChanged="#listaClanski_paket" text="Clanski_paket">
+               <content>
+                  <AnchorPane prefHeight="382.0" prefWidth="662.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="68.0" text="ID" />
+                        <Label layoutX="21.0" layoutY="120.0" text="Naziv" />
+                        <Label layoutX="21.0" layoutY="174.0" text="Opis" />
+                        <TextField fx:id="IDR" layoutX="79.0" layoutY="64.0" />
+                        <TextField fx:id="NazivR" layoutX="79.0" layoutY="116.0" />
+                        <TextField fx:id="OpisR" layoutX="79.0" layoutY="170.0" />
+                        <TableView fx:id="Clanski_paketR" layoutX="27.0" layoutY="243.0" onMouseClicked="#postaviPodatkeUCelijeR" prefHeight="122.0" prefWidth="591.0">
+                          <columns>
+                            <TableColumn fx:id="ColumnIDR" prefWidth="95.0" text="ID" />
+                            <TableColumn fx:id="ColumnNazivR" prefWidth="235.0" text="Naziv" />
+                              <TableColumn fx:id="ColumnOpisR" prefWidth="260.0" text="Opis" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="340.0" layoutY="73.0" mnemonicParsing="false" onAction="#IsprazniPoljaR" text="Isprazni odabir" />
+                        <Button layoutX="364.0" layoutY="104.0" mnemonicParsing="false" onAction="#DodajR" text="Dodaj" />
+                        <Button layoutX="365.0" layoutY="137.0" mnemonicParsing="false" onAction="#UrediR" text="Uredi" />
+                        <Button layoutX="364.0" layoutY="170.0" mnemonicParsing="false" onAction="#ObrisiR" text="Obrisi" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <styleClass>
+      <String fx:value="mainFxmlClass" />
+      <String fx:value="root" />
+   </styleClass>
+</AnchorPane>
